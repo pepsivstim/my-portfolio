@@ -1,6 +1,8 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Template from '@/components/Template';
+
 
 // Overall layout for each page
 
@@ -19,12 +21,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
+
+    return (
         <html lang='en'>
             <body className={inter.className}>
-                <main className='flex min-h-screen flex-col items-center justify-between p-8 bg-sky-400'>
-                    {children}
-                </main>
+                <Template children={children} />
             </body>
         </html>
   )
