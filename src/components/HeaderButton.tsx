@@ -23,7 +23,7 @@ const HeaderButton = ({ name, link, currentPage, setCurrentPage }: HeaderButtonP
 
     return (
         <div onClick={handleClick} className={`content-center ${currentPage === link ? clickedDivStyle : divStyle}`} >
-            <Link href={link} className={`p-2 bg-sky-200 ${currentPage === link ? clickedLinkStyle : linkStyle}`}>{name}</Link>
+            <Link href={link} className={`p-2 bg-sky-200 active:bg-sky-700 ${currentPage === link ? clickedLinkStyle : linkStyle}`}>{name}</Link>
         </div>
     )
   }
